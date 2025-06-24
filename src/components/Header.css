@@ -1,0 +1,44 @@
+.header {
+  padding: 2rem 2.5rem; /* more vertical room (top & bottom), comfy horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+.toggle {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.2rem;
+}
+
+.modeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.modeToggle:hover {
+  transform: scale(1.2);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: lowercase;
+  margin: 0;
+}
+
