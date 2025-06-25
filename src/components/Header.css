@@ -1,5 +1,5 @@
 .header {
-  padding: 2rem 2.5rem; /* more vertical room (top & bottom), comfy horizontal */
+  padding: 2rem 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,8 +9,6 @@
   border-bottom: 1px solid var(--border-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-
 
 .toggle {
   position: absolute;
@@ -42,3 +40,22 @@
   margin: 0;
 }
 
+
+/* 💅 responsive tweaks for screens below 600px */
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .toggle {
+    position: static;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+}
