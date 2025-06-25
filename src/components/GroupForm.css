@@ -7,6 +7,9 @@
   margin: 2rem auto;
   font-family: 'Nunito', sans-serif;
 }
+#groupName, #numPeople{
+  text-align: center;
+}
 
 .formRow {
   display: flex;
@@ -47,10 +50,10 @@ input:focus {
   transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🔥 button themes */
+
 body.dark-mode .submitDetails {
   background-color: white;
-  color: #0a0f2c; /* dark blue */
+  color: #0a0f2c; 
 }
 
 body:not(.dark-mode) .submitDetails {

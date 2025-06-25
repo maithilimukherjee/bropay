@@ -8,7 +8,7 @@ function Header({onToggleTheme})
             <div className='toggle'>
                 <button className='modeToggle' onClick={onToggleTheme}>🌙</button>
             </div>
-            <h1 className='logo'>⪩⪨ dutchside ⪩⪨</h1>
+            <h1 className='logo'>⪩⪨ bropay ⪩⪨</h1>
         </header>
     );
 }
