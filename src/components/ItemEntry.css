@@ -90,9 +90,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.girlByeBtn:hover {
-  transform: scale(1.07);
-}
+
 
 /* ========== mobile styles ========== */
 @media (max-width: 768px) {
@@ -111,7 +109,7 @@
   .itemTable tr {
     display: block;
     margin-bottom: 1rem;
-    border: 1px solid var(--border-color);
+    border: none;
     border-radius: 10px;
     padding: 0.5rem;
   }
@@ -133,5 +131,26 @@
     width: 50%;
     padding: 0.3rem;
     font-size: 1rem;
+  }
+
+  /* mobile buttons styling */
+  .buttonRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .doneBtn,
+  .nextBtn,
+  .girlByeBtn {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .girlByeBtn {
+    margin-top: 1rem;
   }
 }
