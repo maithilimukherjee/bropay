@@ -26,4 +26,54 @@ body.dark-mode {
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* base layout */
+body {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .inputForm,
+  .itemEntry,
+  .summary {
+    padding: 1rem;
+  }
+
+  .itemTable thead {
+    display: none;
+  }
+
+  .itemTable tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .itemTable td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+  }
+
+  .itemTable td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+
+  input,
+  button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
 
