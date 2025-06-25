@@ -78,18 +78,6 @@
   transform: scale(1.05);
 }
 
-.girlByeBtn {
-  margin-top: 2rem;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  background-color: var(--text-color);
-  color: var(--bg-color);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
 
 
 /* ========== mobile styles ========== */
@@ -133,24 +121,22 @@
     font-size: 1rem;
   }
 
-  /* mobile buttons styling */
+  
   .buttonRow {
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
   }
+.doneBtn,
+.nextBtn
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+}  }
 
-  .doneBtn,
-  .nextBtn,
-  .girlByeBtn {
-    width: 80%;
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
-    text-align: center;
-  }
-
-  .girlByeBtn {
-    margin-top: 1rem;
-  }
-}
