@@ -7,7 +7,6 @@ function ItemEntry({ personIndex, onDone }) {
   const [items, setItems] = useState([]);
   const [showVerdicts, setShowVerdicts] = useState(false);
 
-  // auto-generate item rows when item count changes
   useEffect(() => {
     if (numItems > 0) {
       const rows = Array.from({ length: Number(numItems) }, () => ({
@@ -17,7 +16,7 @@ function ItemEntry({ personIndex, onDone }) {
         verdict: ''
       }));
       setItems(rows);
-      setShowVerdicts(false); // reset verdicts if item count changes
+      setShowVerdicts(false);
     }
   }, [numItems]);
 
@@ -52,7 +51,6 @@ function ItemEntry({ personIndex, onDone }) {
       };
       onDone(personData);
 
-      // clear everything for the next person
       setName('');
       setNumItems('');
       setItems([]);
@@ -92,28 +90,28 @@ function ItemEntry({ personIndex, onDone }) {
           <tbody>
             {items.map((item, idx) => (
               <tr key={idx}>
-                <td>
+                <td data-label="item">
                   <input
                     type="text"
                     value={item.itemName}
                     onChange={(e) => handleItemChange(idx, 'itemName', e.target.value)}
                   />
                 </td>
-                <td>
+                <td data-label="cost">
                   <input
                     type="number"
                     value={item.cost}
                     onChange={(e) => handleItemChange(idx, 'cost', e.target.value)}
                   />
                 </td>
-                <td>
+                <td data-label="paid">
                   <input
                     type="number"
                     value={item.paid}
                     onChange={(e) => handleItemChange(idx, 'paid', e.target.value)}
                   />
                 </td>
-                <td>{item.verdict}</td>
+                <td data-label="verdict">{item.verdict}</td>
               </tr>
             ))}
           </tbody>
@@ -124,7 +122,6 @@ function ItemEntry({ personIndex, onDone }) {
         <button className="doneBtn" onClick={handleDone}>
           done
         </button>
-
         <button
           className="doneBtn"
           onClick={handleNext}
@@ -132,7 +129,6 @@ function ItemEntry({ personIndex, onDone }) {
         >
           next
         </button>
-
       </div>
     </div>
   );
